@@ -73,14 +73,14 @@ namespace QuarantineDaysCount
             int startingwidth = x;
             for (int l = 0; l < lines; l++)
             {
-                y += y * l + 30 + height;
+                y += 30 + height;
                 DrawFullGroup(canvas, startingwidth, padding, y, height);
                 for (int i = 1; i < 6; i++)
                 {
                     startingwidth += padding * 6;
                     DrawFullGroup(canvas, startingwidth, padding, y, height);
                 }
-
+                startingwidth = x;
             }
 
             if (restLines > 0)
@@ -97,6 +97,13 @@ namespace QuarantineDaysCount
 
                 if (resto > 0)
                     DrawRestoGroup(canvas, startingwidth + padding * 6, padding, y, height, resto);
+            }
+            else
+            {
+                y += 30 + height;
+                startingwidth = x;
+                if (resto > 0)
+                    DrawRestoGroup(canvas, startingwidth, padding, y, height, resto);
             }
 
             y += y * lines + 30 + height;
