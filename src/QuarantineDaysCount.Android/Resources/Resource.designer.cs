@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("QuarantineDaysCount.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("CuantosDias.Droid.Resource", IsApplication=true)]
 
 namespace QuarantineDaysCount.Droid
 {
